@@ -32,3 +32,46 @@ body {
   font-family: 'kaushan_scriptregular';
   font-size: 26px;
 }
+
+.pagination {
+  background: image_url('prism.png');
+  cursor: default;
+  height: 30px;
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+  .disabled {
+    display: none;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1;
+  }
+  a {
+    text-decoration: none;
+    color: #E3E85A;
+    &:hover, &:focus {
+      color: #white;
+      border-color: #E3E85A;
+    }
+  }
+  .page_info {
+    background: #2e6ab1;
+    color: #E3E85A;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    b {
+      color: #E3E85A;
+      background: #2e6ab1 + 60;
+      padding: 0.1em 0.25em;
+    }
+  }
+}
