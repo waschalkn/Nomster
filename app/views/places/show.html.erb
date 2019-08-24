@@ -103,15 +103,16 @@
 </div>
 
 
-<%= simple_form_for @photos, url: place_photos_path(@place) do |f| %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :picture %>
   <%= f.input :caption %>
   <%= f.submit "Submit Photo!", class: 'btn btn-primary' %>
 <% end %>
 
-<h1>Caption</h1>
-<% @place.photos.each do |photos| %>
+
+<% @place.photos.each do |photo| %>
   
-  <%= photos.caption %>
+  <%= photo.caption %>
+  <%= image_tag photo.picture.url %>
 
 <% end %>
